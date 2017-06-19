@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  
+  <servlet>
+   <servlet-name>Search</servlet-name>
+   <servlet-class>com.bochum.servlet.SearchServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+   <servlet-name>Search</servlet-name>
+   <url-pattern>/search</url-pattern>
+  </servlet-mapping>
 </web-app>
