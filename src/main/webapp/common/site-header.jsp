@@ -11,7 +11,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/"><img src="/static/images/zoomeye.svg" alt="ZoomEye" style="width: 114px;height: 24px;"></a>
+        <a class="navbar-brand" href="/"><img src="/static/images/neteye.jpg" alt="NetEye" style="width: 114px;height: 24px;"></a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -36,14 +36,7 @@
         </form>
 		
         <ul class="nav navbar-nav">
-          <li data-nav="search" class="active"><a href="/">搜索 <span class="sr-only">(current)</span></a></li>
-          <li data-nav="vision"><a href="/vision/">视角</a></li>
-
-          <li data-nav="pirate"><a href="/pirate">海盗榜</a></li>
-          <li data-nav="api"><a href="/api">API</a></li>
-
           
-          <li data-nav="more"><a href="/more">更多</a></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">

@@ -39,13 +39,7 @@
       <div class="collapse navbar-collapse" id="j-site-navbar-collapse">
 
         <ul class="nav navbar-nav">
-          <li data-nav="search" class="active"><a href="https://www.zoomeye.org/">搜索 <span class="sr-only">(current)</span></a></li>
-          <li data-nav="vision"><a href="https://www.zoomeye.org/vision/">视角</a></li>
-          <li data-nav="pirate"><a href="https://www.zoomeye.org/pirate">海盗榜</a></li>
-          <li data-nav="api"><a href="https://www.zoomeye.org/api">API</a></li>
 
-          
-          <li data-nav="more"><a href="https://www.zoomeye.org/more">更多</a></li>
         </ul>
 
           <ul class="nav navbar-nav navbar-right">

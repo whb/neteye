@@ -35,7 +35,7 @@
     <div class="slick-item" style="background-image: url(/static/images/bg-index-hero.jpg?v=1)"></div>
     <!--<div class="slick-item" style="background-image: url(/static/v4/images/bg-index-hero-2.jpg?v=1)"></div>-->
   </div>
-  <img src="/static/images/zoomeye_v4.svg" class="site-logo" alt="ZoomEye" style="width: 110px;height: 91px;">
+  <img src="/static/images/neteye.jpg" class="site-logo" alt="NetEye" style="width: 110px;height: 91px;">
   <form action="/search" method="get" id="normal-search-form" class="index-search-form j-search-form">
     <div class="input-wrapper">
       <span class="twitter-typeahead" style="position: relative; display: inline-block; direction: ltr;"><input class="form-control tt-input" type="text" autofocus="true" name="q" role="combobox" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top;" placeholder="app:&quot;Indy httpd&quot;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Microsoft Yahei&quot;, &quot;Hiragino Sans GB&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; right: auto;"><div class="tt-dataset-app"></div></span></span>
