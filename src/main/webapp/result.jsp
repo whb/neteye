@@ -506,7 +506,6 @@ function renderDetail(detail) {
   		replace(/%DESCRIPTION%/g, detail.description);
     
     detailItem = '<li>' + ipItem + articleItem + sectionItem + '</li>';
-    console.log(detailItem);
 	$("#detailResult").append(detailItem);
 	
 }
