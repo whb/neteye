@@ -391,117 +391,7 @@
 
 
 <ul class="result device" id="detailResult">
-    <li>
-      <h3>
-    
-      <a class="ip" href="https://www.zoomeye.org/search?q=ip:58.211.243.122">58.211.243.122</a>
-    
-        <a class="original hint--bottom" target="_blank" href="http://58.211.243.122:8030/" data-hint="在新窗口打开" style="display: inline;">
-          <sup><i class="iconfont icon-new-window"></i></sup></a></h3>
-
-      <hr>
-
-      <article class="port">
-        <ul class="tags">
-            <li class="app">
-              
-                <a href="https://www.zoomeye.org/search?q=app:%22Indy%20httpd%22%20ver:%2210.1.5%22&amp;t=host">
-                  Indy httpd:10.1.5</a>
-              
-            </li>
-        </ul>
-
-        <div class="hostname"></div>
-          <address>
-            <a class="country" href="https://www.zoomeye.org/search?q=country:%22China%22">
-              <span class="flag flag-cn"></span>
-              China
-            </a>
-            <a class="city" href="https://www.zoomeye.org/search?q=city:%22Suzhou%22">
-              Suzhou</a>
-          </address>
-        <div class="timestamp"><i class="iconfont icon-time"></i>
-          <time datetime="2017-06-19T11:41:13">六月 19, 2017</time>
-        </div>
-      </article>
-
-      <section class="banner">
-        <header>
-          <i><a href="https://www.zoomeye.org/search?q=port:8030&amp;t=host">8030</a></i>
-          <s><a href="https://www.zoomeye.org/search?q=service:%22http%22&amp;t=host">http</a></s>
-        </header>
-            
-<pre class="expand" id="testjson">HTTP/1.1 200 OK
-Connection: close
-Content-Type: text/html
-Content-Length: 1308
-Server: Indy/10.1.5
-
-&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;PASPLib - RemObjects SDK for .NET v0.0.0.0&lt;/title&gt;
-    &lt;meta name="GENERATOR" content="RemObjects SDK for .NET {1}"&gt;
-    &lt;style&gt;
-      body
-      {
-        background-color: #f7f7f7;
-        margin: 0;
-        padding: 0;
-        font-family: Verdana, Tahoma, Arial, Helvetica, sans serif;
-        font-size: 10pt;
-      }
-      .header
-      {
-        padding: 5px;
-        background-color: #c0c0c0;
-        border-bottom: 5px solid #808080;
-        font-size: 1.5em;
-      }
-      .body
-      {
-        padding: 5px;
-      }
-      .footer
-      {
-        padding: 5px;
-        border-top: 1px solid #808080;
-        font-size: 0.8em;
-      }
-      .h2
-      {
-        font-weight: bold;
-      }
-    &lt;/style
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;div class="header"&gt;
-    &lt;img src="/favicon.ico" style="padding-right: 5px;"/&gt;PASPLib
-  &lt;/div&gt;
-  &lt;div class="body"&gt;
-    
-    &lt;p&gt;&lt;a href="/doc"&gt;View full documentation&lt;/a&gt; | &lt;a href="/rodl"&gt;View RODL&lt;/a&gt;&lt;/p&gt;
-    &lt;p class="h2"&gt;Available Dispatchers:&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href="/Bin"&gt;Bin&lt;/a&gt; &lt;i&gt;(TROBinMessage)&lt;/i&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="/SOAP"&gt;SOAP&lt;/a&gt; &lt;i&gt;(TROSOAPMessage)&lt;/i&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-  &lt;div class="footer"&gt;
-    RemObjects SDK for Delphi
-    RemObjects Software, LLC. &lt;a href="http://www.remobjects.com"&gt;remobjects.com&lt;/a&gt;.
-  &lt;/div&gt;
-
-
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-            
-<p></p>
-        
-
-      </section>
-
-    </li>
+   
   
 </ul>
 
@@ -568,19 +458,24 @@ function requestAndRenderDetails() {
 } 
 
 function renderDetail(detail) {
-	var ipItem = '<li>' + 
-    '<h3>' +
+	var ipItem = '<h3>' +
     '<a class="ip" href="/search?q=ip:%IP%">%IP%</a>' +
     '<a class="original hint--bottom" target="_blank" href="" data-hint="在新窗口打开" style="display: inline;">' +
     '<sup><i class="iconfont icon-new-window"></i></sup></a></h3>' +
     '<hr>';
     ipItem = ipItem.replace(/%IP%/g, detail.ip);
     
+    var tagsItem = '';
+    for(var i in detail.tags) {
+    	var tagItem = '<li class="app">' +
+        	'<a href="">%TAG%</a>' +
+	    '</li>';
+	    tagItem = tagItem.replace(/%TAG%/g, detail.tags[i].tag);
+	    tagsItem += tagItem;
+    }
     var articleItem = '<article class="port">' +
 	    '<ul class="tags">' +
-		    '<li class="app">' +
-		        '<a href="">Indy httpd:10.1.5</a>' +
-		    '</li>' +
+	    	tagsItem +
 		'</ul>' +
 		'<div class="hostname"></div>' +
 	  	'<address>' +
@@ -597,8 +492,20 @@ function renderDetail(detail) {
 	'</article>';
 	articleItem = articleItem.replace(/%COUNTRY%/g, detail.country).replace(/%CITY%/g, detail.city)
 		.replace(/%DATETIME%/g, detail.datetime);
+	
+	
+	var sectionItem = '<section class="banner">' +
+		'<header>' +
+	    	'<i><a href="/search?q=port:%PORT%&amp;t=host">%PORT%</a></i>' +
+	    	'<s><a href="/search?q=service:%22%SERVICE%%22&amp;t=host">%SERVICE%</a></s>' +
+		'</header>' +	
+		'<pre class="expand">%DESCRIPTION%</pre>' +
+	  	'<p></p>' +
+  	'</section>';
+  	sectionItem = sectionItem.replace(/%PORT%/g, detail.port).replace(/%SERVICE%/g, detail.service).
+  		replace(/%DESCRIPTION%/g, detail.description);
     
-    detailItem = ipItem + articleItem;
+    detailItem = '<li>' + ipItem + articleItem + sectionItem + '</li>';
     console.log(detailItem);
 	$("#detailResult").append(detailItem);
 	
