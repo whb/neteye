@@ -8,10 +8,10 @@
    "ip":"58.251.37.248 ",
    "tags":[
     {
-     "tag";"Oracle WebLogic Server"
+     "tag":"Oracle WebLogic Server"
     },
     {
-     "tag";"Servlet 2.5; JSP 2.1" 
+     "tag":"Servlet 2.5; JSP 2.1" 
     }
    ],
    "country":"china",
@@ -19,19 +19,16 @@
    "datetime":"2017-06-16 09:34:38",
    "port":"8088",
    "service":"HTTP",
-   "description":" content=text/html; charset=utf-8 /&gt;
-    &lt;meta name=viewport content=width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no /&gt;
-    &lt;meta name=apple-touch-fullscreen content=YES /&gt;
-    &lt;meta name=apple-mobile-web-<EM>app</EM>-status-bar-style content=black"
+   "description":" content=text/html; charset=utf-8 /&gt;\n    &lt;meta name=viewport content=width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no /&gt;\n    &lt;meta name=apple-touch-fullscreen content=YES /&gt;\n    &lt;meta name=apple-mobile-web-<EM>app</EM>-status-bar-style content=black"
   },
   {
    "ip":"201.131.120.20",
    "tags":[
     {
-     "tag";"Oracle WebLogic Server"
+     "tag":"Oracle WebLogic Server"
     },
     {
-     "tag";"Servlet 2.4; JSP 2.0"
+     "tag":"Servlet 2.4; JSP 2.0"
 	} 
    ],
    "country":"Mexico",
@@ -39,22 +36,16 @@
    "datetime":"2017-06-21T12:28:11",
    "port":"80",
    "service":"http",
-   "description":"://java.sun.com/update/1.5.0/jinstall-1_5_0-windows-i586.cab classid=clsid:5852F5ED-8BF4-11D4-A245-0080C6F74284 height=0 width=0>
-			<param name=app value=http://corrosv2.monex.com.mx/Corros.jnlp>
-			<param name=back value=true>
-			<a href=http://java.sun.com/j2se/1.5.0/download.html>Descargar Java Web Start</a>
-		</object>
-	</body>
-</html> "
+   "description":"://java.sun.com/update/1.5.0/jinstall-1_5_0-windows-i586.cab classid=clsid:5852F5ED-8BF4-11D4-A245-0080C6F74284 height=0 width=0>\n\t\t\t<param name=app value=http://corrosv2.monex.com.mx/Corros.jnlp>\n\t\t\t<param name=back value=true>\n\t\t\t<a href=http://java.sun.com/j2se/1.5.0/download.html>Descargar Java Web Start</a>\n\t\t</object>\n\t</body>\n</html> "
   },
   {
    "ip":"36.110.112.203",
    "tags":[
     {
-     "tag";"Oracle WebLogic Server"
+     "tag":"Oracle WebLogic Server"
     },
     {
-     "tag";"Servlet 2.5; JSP 2.1"
+     "tag":"Servlet 2.5; JSP 2.1"
 	} 
    ],
    "country":"China",
@@ -62,68 +53,13 @@
    "datetime":"2017-06-21T12:28:11",
    "port":"8030",
    "service":"http",
-   "description":"HTTP/1.1 200 OK
-Connection: close
-Date: Mon, 19 Jun 2017 05:14:25 GMT
-Content-Length: 1962
-Content-Type: text/html; charset=UTF-8
-Set-Cookie: JSESSIONID=8GbYZHdRmccLJpXvS1rhd0T4l9WLDyZTpTLyVLf044nt1V7D4pLh!-1131834027; path=/; HttpOnly
-X-Powered-By: Servlet/2.5 JSP/2.1
-
-<!DOCTYPE html>
-
-
-
-
-<html lang='zh-cn'>
-<head>
-    <meta http-equiv=Content-Type content=text/html; charset=UTF-8>
-    <meta http-equiv=Cache-Control content=no-cache>
-    <meta name=apple-mobile-web-app-capable content=yes />
-    <meta name=viewport content=width=device-width, minimum-scale=1.0, maximum-scale=1.0/>
-    <link href=/login/css/login.css rel=stylesheet type=text/css />   
-    <title>增值税管理系统</title>
-    <script src=/login/js/jquery.js></script>
-    <script src=/login/js/default.js></script>
-    <script type=text/javascript src=/js/jquery/jquery.md5.js></script>
-    <script type=text/javascript src=/login/login.js></script>
-    <script type=text/javascript src=/login/js/dict.js></script>
-</head>
-<body>
-<div class=all>
-	<a class=logo pngFix></a>
-    <div class=loginmain>
-    <div class=loginline></div>
-    <form method=post id=loginForm onsubmit=return check()>
-    	<input type=hidden name=ctx id=ctx value= />
-    	<input type=hidden name=service id=service value= />
-	    <p>用户名</p>
-	    <p>
-	    	<input class=input1 type='text' id=username name='username' placeholder=请输入用户名><i class=icon1></i>
-	    </p>
-	    <p>密码</p>
-	    <p>
-	    	<input class=input1  type='password' placeholder=请输入密码 id=password name='password'><i class=icon2></i>
-	    </p>
-	    <p>验证码</p>
-	    <p>
-	    	<input class=input2  type='text' autocomplete=off maxlength='6' placeholder=请输入验证码 id=yzm name='yzm'><i class=icon3></i>
-	    	<img class=img alt=验证码，点击获取 id=imgObj src=/verifyCode onclick=changeImg()><!-- <a href=# onclick=changeImg()>换一张</a> -->
-	    </p>
-	    <div class=loginline></div>       
-	    <p><input class=loginbtn pngFix type='submit' value=登 录></p>
-	    <div class=wrong_info></div>
-    </form> 
-    </div>    
-</div>
-</body>
-</html> "
+   "description":"HTTP/1.1 200 OK\nConnection: close\nDate: Mon, 19 Jun 2017 05:14:25 GMT\nContent-Length: 1962\nContent-Type: text/html; charset=UTF-8\nSet-Cookie: JSESSIONID=8GbYZHdRmccLJpXvS1rhd0T4l9WLDyZTpTLyVLf044nt1V7D4pLh!-1131834027; path=/; HttpOnly\nX-Powered-By: Servlet/2.5 JSP/2.1\n\n<!DOCTYPE html>\n\n\n\n\n<html lang='zh-cn'>\n<head>\n    <meta http-equiv=Content-Type content=text/html; charset=UTF-8>\n    <meta http-equiv=Cache-Control content=no-cache>\n    <meta name=apple-mobile-web-app-capable content=yes />\n    <meta name=viewport content=width=device-width, minimum-scale=1.0, maximum-scale=1.0/>\n    <link href=/login/css/login.css rel=stylesheet type=text/css />   \n    <title>增值税管理系统</title>\n    <script src=/login/js/jquery.js></script>\n    <script src=/login/js/default.js></script>\n    <script type=text/javascript src=/js/jquery/jquery.md5.js></script>\n    <script type=text/javascript src=/login/login.js></script>\n    <script type=text/javascript src=/login/js/dict.js></script>\n</head>\n<body>\n<div class=all>\n\t<a class=logo pngFix></a>\n    <div class=loginmain>\n    <div class=loginline></div>\n    <form method=post id=loginForm onsubmit=return check()>\n    \t<input type=hidden name=ctx id=ctx value= />\n    \t<input type=hidden name=service id=service value= />\n\t    <p>用户名</p>\n\t    <p>\n\t    \t<input class=input1 type='text' id=username name='username' placeholder=请输入用户名><i class=icon1></i>\n\t    </p>\n\t    <p>密码</p>\n\t    <p>\n\t    \t<input class=input1  type='password' placeholder=请输入密码 id=password name='password'><i class=icon2></i>\n\t    </p>\n\t    <p>验证码</p>\n\t    <p>\n\t    \t<input class=input2  type='text' autocomplete=off maxlength='6' placeholder=请输入验证码 id=yzm name='yzm'><i class=icon3></i>\n\t    \t<img class=img alt=验证码，点击获取 id=imgObj src=/verifyCode onclick=changeImg()><!-- <a href=# onclick=changeImg()>换一张</a> -->\n\t    </p>\n\t    <div class=loginline></div>       \n\t    <p><input class=loginbtn pngFix type='submit' value=登 录></p>\n\t    <div class=wrong_info></div>\n    </form> \n    </div>    \n</div>\n</body>\n</html> "
   },
   {
    "ip":"36.110.112.203 ",
    "tags":[
     {
-     "tag";"Apache Tomcat/Coyote JSP engine:1.1 "
+     "tag":"Apache Tomcat/Coyote JSP engine:1.1 "
     }
    ],
    "country":"china",
@@ -131,11 +67,7 @@ X-Powered-By: Servlet/2.5 JSP/2.1
    "datetime":"2017-06-16 09:34:38",
    "port":"443",
    "service":"http",
-   "description":"HTTP/1.1 404 Not Found
-Server: Apache-Coyote/1.1
-Content-Length: 0
-Date: Tue, 16 May 2017 02:36:18 GMT
-Connection: close"
+   "description":"HTTP/1.1 404 Not Found\nServer: Apache-Coyote/1.1\nContent-Length: 0\nDate: Tue, 16 May 2017 02:36:18 GMT\nConnection: close"
   }  
  ]
 }

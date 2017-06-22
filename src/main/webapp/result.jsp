@@ -16,6 +16,8 @@
   <link href="/static/css/search.dist.v2_7.css" rel="stylesheet" type="text/css" media="screen">
   <link href="/static/css/spinner.dist.v2_4.css" rel="stylesheet" type="text/css" media="screen">
   <link href="/static/css/v3_to_v4_migrate.dist.v1_0_8.css" rel="stylesheet" type="text/css" media="screen">
+  
+  <script type="text/javascript" src="/static/scripts/jquery-3.2.1.min.js"></script>
 </head>
 
 <body class="results" data-manual-ajax-url="/help/manual_ajax">
@@ -388,7 +390,7 @@
             
 
 
-<ul class="result device">
+<ul class="result device" id="detailResult">
     <li>
       <h3>
     
@@ -429,7 +431,7 @@
           <s><a href="https://www.zoomeye.org/search?q=service:%22http%22&amp;t=host">http</a></s>
         </header>
             
-<pre class="expand">HTTP/1.1 200 OK
+<pre class="expand" id="testjson">HTTP/1.1 200 OK
 Connection: close
 Content-Type: text/html
 Content-Length: 1308
@@ -541,4 +543,69 @@ Server: Indy/10.1.5
     </div>
   </section>
 
+
+<script type="text/javascript">
+
+function callAjax(settings, callback) {
+	$.ajax({
+		type: settings['type'], url: settings['url'], data: settings['data'], dataType: "json",
+		success: function(data){
+			callback(data);
+		},
+		error: function(jqXHR, textStatus, errorThrown) {
+			console.log("ajax error!!! textStatus: "+ textStatus + " errorThrown: " + errorThrown);
+		},
+	});
+}
+
+function requestAndRenderDetails() { 
+	var settings = {type:'get', url: '/detailapi', data:{page: 1}};
+	callAjax(settings, function(data) {
+		for (var i in data.result) {
+			renderDetail(data.result[i]);
+		}
+	});
+} 
+
+function renderDetail(detail) {
+	var ipItem = '<li>' + 
+    '<h3>' +
+    '<a class="ip" href="/search?q=ip:%IP%">%IP%</a>' +
+    '<a class="original hint--bottom" target="_blank" href="" data-hint="在新窗口打开" style="display: inline;">' +
+    '<sup><i class="iconfont icon-new-window"></i></sup></a></h3>' +
+    '<hr>';
+    ipItem = ipItem.replace(/%IP%/g, detail.ip);
+    
+    var articleItem = '<article class="port">' +
+	    '<ul class="tags">' +
+		    '<li class="app">' +
+		        '<a href="">Indy httpd:10.1.5</a>' +
+		    '</li>' +
+		'</ul>' +
+		'<div class="hostname"></div>' +
+	  	'<address>' +
+		    '<a class="country" href="/search?q=country:%22%COUNTRY%%22">' +
+		      '<span class="flag flag-cn"></span>' + '%COUNTRY%' + 
+		    '</a>' +
+		    '<a class="city" href="/search?q=city:%22%CITY%%22">' +
+		      '%CITY%' +
+		    '</a>' +
+	  	'</address>' +
+		'<div class="timestamp"><i class="iconfont icon-time"></i>' + 
+	  		'<time datetime="%DATETIME%">%DATETIME%</time>' +
+		'</div>' +
+	'</article>';
+	articleItem = articleItem.replace(/%COUNTRY%/g, detail.country).replace(/%CITY%/g, detail.city)
+		.replace(/%DATETIME%/g, detail.datetime);
+    
+    detailItem = ipItem + articleItem;
+    console.log(detailItem);
+	$("#detailResult").append(detailItem);
+	
+}
+
+
+requestAndRenderDetails();
+</script>
 </body>
+</html>
