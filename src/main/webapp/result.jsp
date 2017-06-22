@@ -434,7 +434,7 @@ function callAjax(settings, callback) {
 }
 
 function requestAndRenderDetails() { 
-	var settings = {type:'get', url: '/detailapi', data:{page: 1}};
+	var settings = {type:'get', url: '/api/detail', data:{page: 1}};
 	callAjax(settings, function(data) {
 		for (var i in data.result) {
 			renderDetail(data.result[i]);

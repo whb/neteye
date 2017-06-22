@@ -6,6 +6,10 @@
   <display-name>Archetype Created Web Application</display-name>
   
   <servlet>
+   <servlet-name>MainPageAPI</servlet-name>
+   <servlet-class>com.bochum.neteye.api.MainPageServlet</servlet-class>
+  </servlet>
+  <servlet>
    <servlet-name>DetailAPI</servlet-name>
    <servlet-class>com.bochum.neteye.api.DetailServlet</servlet-class>
   </servlet>
@@ -16,8 +20,12 @@
   </servlet>
   
   <servlet-mapping>
+   <servlet-name>MainPageAPI</servlet-name>
+   <url-pattern>/api/mainpage</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
    <servlet-name>DetailAPI</servlet-name>
-   <url-pattern>/detailapi</url-pattern>
+   <url-pattern>/api/detail</url-pattern>
   </servlet-mapping>
 
   <servlet-mapping>

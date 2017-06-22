@@ -58,5 +58,59 @@
   </form>
 </section>
 
+
+
+<div class="col-sm-12">
+      <h2 class="row-section-title">
+        我们正在探索 ...
+      </h2>
+
+      <div class="row-section-title-des">
+        分布在全球各地的爬虫节点，7 x 24 小时实时抓取、解析、更新
+      </div>
+      <div class="row-section-body">
+        <div class="index-statistic" data-sr-id="1" style="; visibility: visible;  -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; ">
+          
+          <div class="statistic-wrapper">
+            <dl class="left">
+              <dd id="hosts-num" class="j-hosts-num odometer odometer-auto-theme" data-num="797,464,207"></dd>
+              <dt>主机数</dt>
+            </dl>
+            <dl class="right">
+              <dd id="web-num" class="j-web-num odometer odometer-auto-theme" data-num="132,122,605"></dd>
+              <dt>网站数</dt>
+            </dl>
+          </div>
+          
+        </div>
+      </div>
+      
+</div> 
+
+
+<script type="text/javascript">
+function callAjax(settings, callback) {
+	$.ajax({
+		type: settings['type'], url: settings['url'], data: settings['data'], dataType: "json",
+		success: function(data){
+			callback(data);
+		},
+		error: function(jqXHR, textStatus, errorThrown) {
+			console.log("ajax error!!! textStatus: "+ textStatus + " errorThrown: " + errorThrown);
+		},
+	});
+}
+
+function requestAndRenderNums() { 
+	var settings = {type:'get', url: '/api/mainpage', data:{page: 1}};
+	callAjax(settings, function(data) {
+		console.log(data);
+		$("#hosts-num").text(data.hosts_num);
+		$("#web-num").text(data.web_num);
+	});
+} 
+
+requestAndRenderNums();  
+</script>
 </body>
 </html>

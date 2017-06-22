@@ -12,4 +12,5 @@
 
   <link href="/static/css/v4.dist.v0_1_7.css" rel="stylesheet" type="text/css" media="screen">
   <meta name="description" content="是XXXXX推出的一款网络空间搜索引擎，带领您探索互联网设备和网站节点，感受网络空间的心跳。">
+  <script type="text/javascript" src="/static/scripts/jquery-3.2.1.min.js"></script>
 </head>
