@@ -368,19 +368,6 @@
           </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="result-list" style="min-height: 800px;">
             
 <div class="result-summary">
@@ -391,7 +378,6 @@
 
 
 <ul class="result device" id="detailResult">
-   
   
 </ul>
 
@@ -423,8 +409,6 @@
       <li><a href="https://www.zoomeye.org/search?q=app%3A%22Indy%20httpd%22&amp;p=2&amp;t=host">下一页 »</a></li>
   </ul>
 
- 
-            
           </div>
 
         </div>
