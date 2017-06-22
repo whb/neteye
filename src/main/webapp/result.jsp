@@ -18,6 +18,7 @@
   <link href="/static/css/v3_to_v4_migrate.dist.v1_0_8.css" rel="stylesheet" type="text/css" media="screen">
   
   <script type="text/javascript" src="/static/scripts/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/static/scripts/country_name2code.js"></script>
 </head>
 
 <body class="results" data-manual-ajax-url="/help/manual_ajax">
@@ -464,7 +465,7 @@ function renderDetail(detail) {
 		'<div class="hostname"></div>' +
 	  	'<address>' +
 		    '<a class="country" href="/search?q=country:%22%COUNTRY%%22">' +
-		      '<span class="flag flag-cn"></span>' + '%COUNTRY%' + 
+		      '<span class="flag %COUNTRY_FLAG%"></span>' + '%COUNTRY%' + 
 		    '</a>' +
 		    '<a class="city" href="/search?q=city:%22%CITY%%22">' +
 		      '%CITY%' +
@@ -475,7 +476,7 @@ function renderDetail(detail) {
 		'</div>' +
 	'</article>';
 	articleItem = articleItem.replace(/%COUNTRY%/g, detail.country).replace(/%CITY%/g, detail.city)
-		.replace(/%DATETIME%/g, detail.datetime);
+		.replace(/%DATETIME%/g, detail.datetime).replace(/%COUNTRY_FLAG%/g, getCountryFlag(detail.country));
 	
 	
 	var sectionItem = '<section class="banner">' +
