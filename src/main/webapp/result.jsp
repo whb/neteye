@@ -36,7 +36,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand visible-xs visible-sm" href="/""><img src="/static/images/zoomeye.svg" alt="ZoomEye" style="width: 114px;height: 24px;"></a>
+            <a class="navbar-brand visible-xs visible-sm" href="/""><img src="/static/images/zoomeye_small.png" alt="ZoomEye" style="width: 114px;height: 24px;"></a>
         </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="j-site-navbar-collapse">
@@ -67,7 +67,7 @@
       <div class="col-xs-12">
         <a href="https://www.zoomeye.org/" class="hidden-xs pull-left">
           
-          <img class="logo-sm" src="/static/images/zoomeye.svg" data-retina="/static/images/zoomeye.png" data-fallback="/static/images/zoomeye.png">
+          <img class="logo-sm" src="/static/images/neteye_small.png" data-retina="/static/images/neteye.png" data-fallback="/static/images/zoomeye.png">
           
         </a>
 
