@@ -7,7 +7,7 @@
   
   <servlet>
    <servlet-name>Search</servlet-name>
-   <servlet-class>com.bochum.servlet.SearchServlet</servlet-class>
+   <servlet-class>com.bochum.neteye.servlet.SearchServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
