@@ -97,7 +97,6 @@
 	<div class="result-list" style="min-height: 800px;">
 		<div class="result-summary">找到约 <strong>64,164</strong> 条结果 (<strong>1.968</strong> 秒)。 </div>
 		<ul class="result device" id="detailResult"></ul>
-		<div class="clearfix"></div>
 		<ul class="pagination">
 		    <li class="active"><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=1&amp;t=host">1</a></li>
 		    <li><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=2&amp;t=host">2</a></li>
