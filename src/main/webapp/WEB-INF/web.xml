@@ -13,6 +13,10 @@
    <servlet-name>DetailAPI</servlet-name>
    <servlet-class>com.bochum.neteye.api.DetailServlet</servlet-class>
   </servlet>
+  <servlet>
+   <servlet-name>SumAPI</servlet-name>
+   <servlet-class>com.bochum.neteye.api.SumServlet</servlet-class>
+  </servlet>
   
   <servlet>
    <servlet-name>Search</servlet-name>
@@ -26,6 +30,10 @@
   <servlet-mapping>
    <servlet-name>DetailAPI</servlet-name>
    <url-pattern>/api/detail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+   <servlet-name>SumAPI</servlet-name>
+   <url-pattern>/api/sum</url-pattern>
   </servlet-mapping>
 
   <servlet-mapping>

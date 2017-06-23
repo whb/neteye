@@ -11,14 +11,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/"><img src="/static/images/neteye_small.png" alt="NetEye" style="width: 114px;height: 24px;"></a>
+        <a class="navbar-brand" href="/"><img src="static/images/neteye_small.png" alt="NetEye" style="width: 114px;height: 24px;"></a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="j-site-navbar-collapse">
 	  
 	  
-        <form class="navbar-form navbar-left search-form j-search-form hidden" role="search" action="/search" method="get">
+        <form class="navbar-form navbar-left search-form j-search-form hidden" role="search" action="search" method="get">
           <div class="form-group">
             <div class="btn-group">
               <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -41,8 +41,6 @@
 
         <ul class="nav navbar-nav navbar-right">
               
-              <li><a href="/accounts/register?next=/">注册账号</a></li>
-              <li class="hidden-xs hidden-sm"><span class="divider">|</span></li>
               <li><a href="/accounts/login/?next=/">登录</a></li>
               
         </ul>
