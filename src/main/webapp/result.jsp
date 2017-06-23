@@ -95,7 +95,7 @@
 	</div>
 
 	<div class="result-list" style="min-height: 800px;">
-		<div class="result-summary">找到约 <strong>64,164</strong> 条结果 (<strong>1.968</strong> 秒)。 </div>
+		<div class="result-summary">找到约 <strong id="result-num">64,164</strong> 条结果 (<strong id="result-time">1.968</strong> 秒)。 </div>
 		<ul class="result device" id="detailResult"></ul>
 		<ul class="pagination">
 		    <li class="active"><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=1&amp;t=host">1</a></li>
@@ -194,9 +194,15 @@ function renderDetail(detail) {
 function requestAndRenderTotal() { 
 	var settings = {type:'get', url: 'api/sum'};
 	callAjax(settings, function(data) {
+		renderResultSummary(data);
 		renderTotal(data);
 	});
 }
+
+function renderResultSummary(data) {
+	$("#result-num").html(data.totalrecords);
+}
+
 function renderTotal(detail) {
 	// year
 	var totalValue = 0;
