@@ -23,16 +23,12 @@
 
 <body class="results" data-manual-ajax-url="help/manual_ajax">
 
-
-
 <section class="mini-search affix-top" data-spy="affix" data-offset-top="0">
-  <div class="container-fluid">
-    <div class="row">
+<div class="container-fluid">
+    <div class="row"> <!-- search line: logo + search_control + login -->
       <div class="col-xs-11 col-lg-11">
         <a href="" class="hidden-xs pull-left">
-          
           <img class="logo-sm" src="static/images/neteye_small.png" data-retina="static/images/neteye.png" data-fallback="static/images/NetEye.png">
-          
         </a>
 
         <div class="bar">
@@ -41,160 +37,87 @@
             <span class="twitter-typeahead" style="position: relative; display: inline-block; direction: ltr;"><input type="text" autocomplete="off" name="q" value="app:&quot;Indy httpd&quot;" class="flex-text tt-input" role="combobox" spellcheck="false" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Microsoft Yahei&quot;, &quot;Hiragino Sans GB&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; right: auto;"><div class="tt-dataset-app"></div></span></span><button class="btn btn-info default" type="submit">探索一下</button>
           </form>
         </div>
-
       </div>
+      
       <div class="col-xs-1 col-lg-1">
-
         <ul class="nav navbar-nav">
-
         </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-              
-              <li><a href="">登录</a></li>
-              
-          </ul>
+         <ul class="nav navbar-nav navbar-right">
+             <li><a href="">登录</a></li>
+         </ul>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row"> <!-- tab -->
       <div class="col-xs-12">
         <ul class="nav nav-tabs search-tab" role="navigation">
           <li data-nav="search" class="active">
             <a href="search?q=app%3A%22Indy+httpd%22&amp;t=host#">搜索结果</a>
           </li>
-          
         </ul>
       </div>
-
     </div>
-
-  </div>
+</div>
 </section>
 
 
+<section class="search-results">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-12">
 
+	<div class="aggregation">
+	  <h3 class="filter-title-result-type hidden-xs">搜索类型</h3>
+	  <ul class="bar-filter filter-result-type clearfix finished">
+	      <li class="clearfix active">
+	        <a href="search?q=app%3A%22Indy%20httpd%22&amp;t=host&amp;f=fliter">公网设备</a>
+	        <i class="glyphicon glyphicon-triangle-left"></i>
+	      </li>
+	      <li class="clearfix">
+	        <a href="search?q=app%3A%22Indy%20httpd%22&amp;t=web&amp;f=fliter">Web 服务</a>
+	        <i class="glyphicon glyphicon-triangle-left"></i>
+	      </li>
+	  </ul>
+	  <div class="hidden-print hidden-xs">
+	  	  <hr>
+	      <h3 class="filter-title-year">Year</h3>
+	      <ul id="totalYears" class="bar-filter filter-year finished"></ul>
+	      
+	      <h3 class="filter-title-port">port</h3>
+	      <ul id="totalPorts" class="bar-filter filter-port finished"></ul>
+	    
+	      <h3 class="filter-title-country">country</h3>
+	      <ul id="totalCountrys" class="bar-filter filter-country finished"></ul>
+	    
+	      <h3 class="filter-title-product">product</h3>
+	      <ul id="totalProducts" class="bar-filter filter-product finished"></ul>
+	  </div>
+	</div>
 
+	<div class="result-list" style="min-height: 800px;">
+		<div class="result-summary">找到约 <strong>64,164</strong> 条结果 (<strong>1.968</strong> 秒)。 </div>
+		<ul class="result device" id="detailResult"></ul>
+		<div class="clearfix"></div>
+		<ul class="pagination">
+		    <li class="active"><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=1&amp;t=host">1</a></li>
+		    <li><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=2&amp;t=host">2</a></li>
+		    <li><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=3&amp;t=host">3</a></li>
+		    <li><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=4&amp;t=host">4</a></li>
+		    <li><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=5&amp;t=host">5</a></li>
+		    <li><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=6&amp;t=host">6</a></li>
+		    <li><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=7&amp;t=host">7</a></li>
+		    <li><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=8&amp;t=host">8</a></li>
+		    <li><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=2&amp;t=host">下一页 »</a></li>
+		</ul>
+	</div>
 
-
-
-
-
-
-
-
-
-
-
-  <section class="search-results">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12">
-
-          <div class="aggregation">
-            <h3 class="filter-title-result-type hidden-xs">搜索类型</h3>
-            <ul class="bar-filter filter-result-type clearfix finished">
-                <li class="clearfix active">
-                  <a href="search?q=app%3A%22Indy%20httpd%22&amp;t=host&amp;f=fliter">公网设备</a>
-                  <i class="glyphicon glyphicon-triangle-left"></i>
-                </li>
-                <li class="clearfix">
-                  <a href="search?q=app%3A%22Indy%20httpd%22&amp;t=web&amp;f=fliter">Web 服务</a>
-                  <i class="glyphicon glyphicon-triangle-left"></i>
-                </li>
-            </ul>
-
-            <div class="hidden-print hidden-xs">
-            <hr>
-                <h3 class="filter-title-year">Year</h3>
-                <ul id="totalYears" class="bar-filter filter-year finished">
-                </ul>
-                
-            
-              
-                <h3 class="filter-title-port">port</h3>
-                <ul id="totalPorts" class="bar-filter filter-port finished">
-                  
-                </ul>
-              
-            
-              
-                <h3 class="filter-title-country">country</h3>
-                <ul id="totalCountrys" class="bar-filter filter-country finished">
-                </ul>
-              
-            
-              
-                <h3 class="filter-title-product">product</h3>
-                <ul id="totalProducts" class="bar-filter filter-product finished">
-                </ul>
-            </div>
-
-          </div>
-
-          <section class="section-related-vul hidden-xs hidden-sm affix-top" data-spy="affix" data-offset-top="43" style="display: none;">
-            <h5><div style="margin-bottom: 10px;">在 &nbsp;&nbsp; <a href="https://www.seebug.org/"><img src="static/css/ksz-seebug.png" alt=""></a></div>
-              相关约 <span class="count"></span> 个漏洞
-            <a class="more" href="https://www.seebug.org/" target="_blank">查看全部 &gt;</a>
-            </h5>
-            <ul></ul>
-
-            <div id="j-section-vul-switch" class="switch ">
-              <!--相关搜索结果-->
-              <i class="fa fa-chevron-right"></i><i class="fa fa-chevron-left"></i></div>
-          </section>
-
-
-<div class="result-list" style="min-height: 800px;">
-            
-<div class="result-summary">
-  找到约 <strong>64,164</strong> 条结果
-  (<strong>1.968</strong> 秒)。
 </div>
-            
-
-
-<ul class="result device" id="detailResult">
-  
-</ul>
-
-            
-
-<div class="clearfix"></div>
-
-            
-
-  <ul class="pagination">
-      <li class="active"><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=1&amp;t=host">1</a></li>
-    
-      <li><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=2&amp;t=host">2</a></li>
-    
-      <li><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=3&amp;t=host">3</a></li>
-    
-      <li><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=4&amp;t=host">4</a></li>
-    
-      <li><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=5&amp;t=host">5</a></li>
-    
-      <li><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=6&amp;t=host">6</a></li>
-    
-      <li><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=7&amp;t=host">7</a></li>
-    
-      <li><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=8&amp;t=host">8</a></li>
-    
-      <li><a href="search?q=app%3A%22Indy%20httpd%22&amp;p=2&amp;t=host">下一页 »</a></li>
-  </ul>
-
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
+</div>
+</div>
+</section>
 
 
 <script type="text/javascript">
-
 function callAjax(settings, callback) {
 	$.ajax({
 		type: settings['type'], url: settings['url'], data: settings['data'], dataType: "json",
