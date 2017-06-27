@@ -209,6 +209,7 @@ function requestAndRenderDetails() {
 			renderDetail(data.result[i]);
 		}
 		
+		// ============== pre expand =================
 		$(".result > li").each(function() {
 			dealResultLi(this);
 		});
@@ -346,7 +347,7 @@ function renderTotal(detail) {
 		totalValue += parseFloat(value.count);
 	});
 	$.each(detail.result_sum.filter_country, function(idx, value) {
-		var row = $('<li class="clearfix show-version"><span data-count="'+value.count+'" class="right-for-menu-holder" style="width: '+Number(parseFloat(value.count)/totalValue*100).toFixed(5)+'%;">'+value.count+'<i class="expand"></i></span><a href="">'+value.country+'</a></li>');
+		var row = $('<li class="clearfix"><span data-count="'+value.count+'" class="right-for-menu-holder" style="width: '+Number(parseFloat(value.count)/totalValue*100).toFixed(5)+'%;">'+value.count+'<i class="expand"></i></span><a href="">'+value.country+'</a></li>');
 		row.append('<div class="clearfix"></div>');
 		var rowSub = $('<ul class="clearfix"></ul>').appendTo(row);
 
@@ -368,7 +369,7 @@ function renderTotal(detail) {
 		totalValue += parseFloat(value.count);
 	});
 	$.each(detail.result_sum.filter_product, function(idx, value) {
-		var row = $('<li class="clearfix show-version"><span data-count="'+value.count+'" class="right-for-menu-holder" style="width: '+Number(parseFloat(value.count)/totalValue*100).toFixed(5)+'%;">'+value.count+'<i class="expand"></i></span><a href="">'+value.name+'</a></li>');
+		var row = $('<li class="clearfix"><span data-count="'+value.count+'" class="right-for-menu-holder" style="width: '+Number(parseFloat(value.count)/totalValue*100).toFixed(5)+'%;">'+value.count+'<i class="expand"></i></span><a href="">'+value.name+'</a></li>');
 		row.append('<div class="clearfix"></div>');
 		var rowSub = $('<ul class="clearfix"></ul>').appendTo(row);
 
@@ -384,6 +385,34 @@ function renderTotal(detail) {
 		$("#totalProducts").append(row);
 	});
 	
+	
+	
+	// ============== aggregation fold/unfold =================
+	$(".aggregation .bar-filter").each(function() {
+	    var max = 0;
+	    $(this).find("> li > span").each(function() {
+	        var count = +$(this).data("count");
+	        if (count > max) {
+	            max = count
+	        }
+	    }).each(function() {
+	        var $span = $(this),
+	        count = $span.data("count");
+	        $span.css("width", count * 60 / max + "%")
+	    });
+	    $(this).find("> li > ul > li > span").each(function() {
+	        var $span = $(this),
+	        count = $span.data("count");
+	        $span.css("width", count * 60 / max + "%")
+	    })
+	});
+	$("body").on("click", ".aggregation .bar-filter > li > span",
+	function() {
+	    var $this = $(this);
+	    $this.parents(".bar-filter > li").toggleClass("show-version")
+	});
+	$(".aggregation .bar-filter").addClass("finished").find("li ul").first().parent().addClass("show-version");
+	// ============== aggregation fold/unfold =================
 }
 
 var MAX_HEIGHT = 200;
@@ -423,9 +452,15 @@ var dealResultLi = function(element) {
     }
 };
 
+
+
+
+
 $(document).ready(function() {
 	requestAndRenderTotal();
 	requestAndRenderDetails();
+	
+	
 });
 </script>
 
