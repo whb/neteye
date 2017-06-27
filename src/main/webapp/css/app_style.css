@@ -1,0 +1,221 @@
+/*
+ * It is advised not to edit the smartadmin_production.css
+ * as this will override any changes you make in the 
+ * later versions of this theme. 
+ * 
+ * We advise that you use use this CSS to override 
+ * SmartAdmin styles. 
+ * 
+ * Rename the stylesheet to whatever your liking so it will stay
+ * unique to you with each update of SmartAdmin.
+ */
+
+/*
+ * INDEX
+ * 
+ * - HTML
+ * - BODY
+ * - CUSTOM STYLES
+ */
+
+#content {
+	padding: 0px !important;
+	margin : 0px !important;
+}
+
+/*表格内容居中*/
+.td-center {
+	text-align: center !important;
+}
+
+.row {
+	padding: 0px !important;
+	margin: 0px !important;
+}
+
+.col {
+	padding: 0px !important;
+}
+
+fieldset {
+	padding: 0px !important;
+}
+
+.label-caption {
+	font-size: 100%;
+	color: #000;
+}
+
+.label-caption, .smart-form .input input, .smart-form .select select, .smart-form .textarea textarea {
+	padding: 5px !important;
+	height: 100% !important;
+}
+
+.label-data {
+	margin: 0px;
+	color: #000;
+	font-size: 100%;
+	font-weight: normal;
+	padding : 0px;
+	white-space: normal;
+}
+
+.label-data img {
+	max-width:100%;
+}
+
+.well {
+	padding: 5px !important;
+	margin: 5px !important;
+}
+
+.page-title {
+	margin: 0px !important;
+	padding: 5px !important;
+	float: left;
+}
+
+.upload {
+	:before{content:"\f093"}
+}
+
+.dd3-item > button {
+	margin-bottom: 0px;
+}
+
+.dd-content {
+	padding-right : 30px !important;
+}
+
+.dd-content-parent {
+	padding-left : 75px !important;
+}
+
+.nav-tabs {
+	margin-top: 5px !important;
+	margin-left: 5px !important;
+	margin-right: 5px !important;
+}
+.tab-content {
+	margin-bottom: 5px !important;
+	margin-left: 5px !important;
+	margin-right: 5px !important;
+}
+
+.dd-item-detail {
+	float: right;
+	margin-top: 8px;
+	margin-right: 8px;
+}
+
+.bochum-navigation {
+	padding: 2px !important;
+	margin: 0px !important;
+	margin-bottom: 5px !important;
+    height:32px;
+/*	background-color: #f7f7f7;
+	border: 1px solid #ddd;
+    -webkit-box-shadow: 0 1px 1px #ececec;*/
+}
+.bochum-navigation a {
+	float : right !important;
+	margin-right: 2px !important;
+}
+.tool-bar {
+	padding: 2px !important;
+	margin: 0px !important;
+	margin-bottom: 5px !important;
+	background-color: #f7f7f7;
+	border: 1px solid #ddd;
+    -webkit-box-shadow: 0 1px 1px #ececec;
+    border-radius: 2px;
+    height:38px;
+}
+.tool-bar.empty {
+	padding: 0px !important;
+	margin: 0px !important;
+	margin-bottom: 0px !important;
+	background-color: !important;
+	border: 0px solid #ddd;
+    -webkit-box-shadow: 0 0px 0px #ececec;
+    border-radius: 0px;
+    height:100%;
+}
+.tool-bar a {
+	float : left;
+	margin-right: 2px !important;
+}
+.bochum-list-view .div {
+	padding: 5px !important;
+	margin: 0px !important;
+}
+.bochum_panel_title {
+	padding: 5px !important;
+}
+.bochum_panel_content {
+	padding: 5px !important;
+}
+
+.bochum_btn_search {
+	
+}
+
+.bochum_btn_popup {
+	
+}
+.bochum_btn_save {
+	
+}
+.bochum_btn_delete {
+	
+}
+.bochum_btn_upload {
+	
+}
+.bochum_btn_download {
+	
+}
+
+.smart-form .btn{
+	padding: 6px 12px;
+}
+
+.smart-form .input{
+	height: 32px;
+}
+
+.dt-toolbar {
+	padding: 5px !important;
+}
+
+._bochum_popup_value {
+	height: 32px;
+	border-color: #BDBDBD;
+	display: block;
+	outline: 0;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 0;
+	background: #fff;
+	font: 13px/16px 'Open Sans',Helvetica,Arial,sans-serif;
+	color: #404040;
+	-moz-appearance: none;
+}
+._bochum_popup_item {
+	margin: 1px;
+	line-height: 30px;
+	font-weight: 400;
+	font-size: 13px;
+	color: #333;
+	text-align: left;
+	white-space: normal;
+	background-color: #6FD43B;
+	border-radius: .25em;
+	float: left;
+	padding-left: 10px;
+	padding-right: 5px;
+}
+._bochum_popup_item i {
+	margin-left: 5px;
+	cursor: pointer;
+}

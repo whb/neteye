@@ -1,0 +1,86 @@
+{
+ "totalpage":"20",
+ "totalrecords":"64164 ",
+ "type":"app",
+ "keyword":"weblogic",
+ "result_sum":{
+   "result_types":[
+    {
+     "type_name":"公网设备"
+    },
+    {
+     "type_name":"Web 服务 "
+    }	
+   ],
+   "filter_year":[
+    {
+     "year":"2014",
+     "count":"233"
+    },
+    {
+     "year":"2015",
+     "count":"9602"
+    },
+    {
+     "year":"2016",
+     "count":"13074"
+    },
+    {
+     "year":"2017",
+     "count":"41238"
+    }		
+   ],
+   "filter_port":[
+    {
+     "port":"80",
+     "count":"16802"
+    },
+    {
+     "port":"443",
+     "count":"12441"
+    }
+   ],
+   "filter_country":[
+    {
+     "country":"china",
+     "count":"111",
+     "filter_city":[
+      {
+       "city":"beijing",
+       "count":"24"
+      },
+      {
+       "city":"shanghai",
+       "count":"88"
+      }	  
+	 ]
+    },
+    {
+     "country":"United States",
+     "count":"97",
+     "filter_city":[
+      {
+       "city":"Raleigh ",
+       "count":"5"
+      },
+      {
+       "city":"Ashburn  ",
+       "count":"85"
+      }	  
+	 ]
+    }	
+   ],
+   "filter_product":[
+    {
+     "name":"Oracle WebLogic Server",
+     "count":"227",
+     "filter_ver":[
+      {
+       "ver":"2.4.7",
+       "count":"24"
+      }
+	 ]	 
+    }
+   ]
+ }
+}

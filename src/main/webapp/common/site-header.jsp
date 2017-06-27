@@ -41,7 +41,7 @@
 
         <ul class="nav navbar-nav navbar-right">
               
-              <li><a href="/accounts/login/?next=/">登录</a></li>
+              <li><a href="/neteye.bm/login.html" target="view_window">登录</a></li>
               
         </ul>
       </div>
