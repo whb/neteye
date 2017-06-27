@@ -4,7 +4,7 @@
 <html lang="zh-cn">
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
-  <title>搜索： 'app:"Indy httpd"' - NetEye</title>
+  <title>搜索： '<%= request.getParameter("q") %>' - NetEye</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
   <meta name="keyword" content="cyberspace,device,NetEye,fingerprint,security,search engine,ipv4,nmap,scan,web">
@@ -27,14 +27,14 @@
 <div class="container-fluid">
     <div class="row"> <!-- search line: logo + search_control + login -->
       <div class="col-xs-11 col-lg-11">
-        <a href="" class="hidden-xs pull-left">
+        <a href="/" class="hidden-xs pull-left">
           <img class="logo-sm" src="static/images/neteye_small.png"  alt="NetEye" style="width: 160px;height: 34px;">
         </a>
 
         <div class="bar">
           <form action="search" method="get" class="ultra-form">
             <input type="hidden" value="host" name="t">
-            <span class="twitter-typeahead" style="position: relative; display: inline-block; direction: ltr;"><input type="text" autocomplete="off" name="q" value="app:&quot;Indy httpd&quot;" class="flex-text tt-input" role="combobox" spellcheck="false" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Microsoft Yahei&quot;, &quot;Hiragino Sans GB&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; right: auto;"><div class="tt-dataset-app"></div></span></span><button class="btn btn-info default" type="submit">探索一下</button>
+            <span class="twitter-typeahead" style="position: relative; display: inline-block; direction: ltr;"><input type="text" autocomplete="off" name="q" value="<%= request.getParameter("q") %>" class="flex-text tt-input" role="combobox" spellcheck="false" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Microsoft Yahei&quot;, &quot;Hiragino Sans GB&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; right: auto;"><div class="tt-dataset-app"></div></span></span><button class="btn btn-info default" type="submit">探索一下</button>
           </form>
         </div>
       </div>
