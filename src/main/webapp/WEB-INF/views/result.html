@@ -3,7 +3,7 @@
 <html lang="zh-cn">
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
-  <title>搜索： 'app:"Indy httpd"' - NetEye</title>
+  <title>搜索： '${currQ}' - NetEye</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
   <meta name="keyword" content="cyberspace,device,NetEye,fingerprint,security,search engine,ipv4,nmap,scan,web">
@@ -176,7 +176,6 @@ function callAjax(settings, callback) {
 	$.ajax({
 		type: settings['type'], url: settings['url'], data: settings['data'], dataType: "json",
 		success: function(data){
-			console.log(data);
 			callback(data);
 		},
 		error: function(jqXHR, textStatus, errorThrown) {
@@ -209,6 +208,10 @@ function requestAndRenderDetails() {
 		for (var i in data.result) {
 			renderDetail(data.result[i]);
 		}
+		
+		$(".result > li").each(function() {
+			dealResultLi(this);
+		});
 	});
 }
 
@@ -288,13 +291,13 @@ function renderDetail(detail) {
 	    	'<i><a href="search?q=port:%PORT%&amp;t=host">%PORT%</a></i>' +
 	    	'<s><a href="search?q=service:%22%SERVICE%%22&amp;t=host">%SERVICE%</a></s>' +
 		'</header>' +	
-		'<pre class="expand">%DESCRIPTION%</pre>' +
+		'<pre>%DESCRIPTION%</pre>' +
 	  	'<p></p>' +
   	'</section>';
   	sectionItem = sectionItem.replace(/%PORT%/g, detail.port).replace(/%SERVICE%/g, detail.service).
   		replace(/%DESCRIPTION%/g, detail.description);
     
-    detailItem = '<li>' + ipItem + articleItem + sectionItem + '</li>';
+    var detailItem = '<li>' + ipItem + articleItem + sectionItem + '</li>';
     
 	$("#detailResult").append(detailItem);
 	
@@ -313,7 +316,7 @@ function requestAndRenderTotal() {
 		$("#totalrecords").html(data.totalrecords);
 		totalPage = parseInt(data.totalpage);
 		
-		requestAndRenderDetails();
+		
 	});
 }
 function renderTotal(detail) {
@@ -383,7 +386,49 @@ function renderTotal(detail) {
 	
 }
 
-requestAndRenderTotal();
+var MAX_HEIGHT = 200;
+var toggleBanner = function() {
+    var $pre = $(this);
+    var selection = document.getSelection();
+    if ($pre.hasClass("on") && selection && selection.type === "Range") return false;
+    $pre.toggleClass("on").css({
+        height: $pre.hasClass("on") ? $pre.data("height") : MAX_HEIGHT
+    })
+};
+var dealResultLi = function(element) {
+	var $li = $(element);
+    var $pre = $li.find("pre"),
+    preHeight = $pre.outerHeight() + 30;
+    if (preHeight > MAX_HEIGHT) {
+        $pre.data("height", preHeight).addClass("expand").click(toggleBanner)
+    }
+    var port = +$li.find(".banner i").text(),
+    ip = $.trim($li.find(".ip").text());
+    var attached = false;
+    var scheme = {
+        http: [80, 81, 8081, 8080, 5060, 591, 593, 981, 2480],
+        https: [443, 1311],
+        ftp: [21]
+    };
+    for (var prefix in scheme) {
+        if (!scheme.hasOwnProperty(prefix)) continue;
+        if (scheme[prefix].indexOf(port) > -1) {
+            $li.find(".original").attr("href", prefix + "://" + ip + ":" + port).show();
+            attached = true;
+            break
+        }
+    }
+    if (!attached && $pre.text().match(/^HTTP\//)) {
+        $li.find(".original").attr("href", "http://" + ip + ":" + port).show()
+    }
+};
+
+$(document).ready(function() {
+	requestAndRenderTotal();
+	requestAndRenderDetails();
+});
 </script>
+
+
 </body>
 </html>
