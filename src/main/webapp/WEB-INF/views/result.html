@@ -253,10 +253,11 @@ function rederPaging(detail) {
 function renderDetail(detail) {
 	var ipItem = '<h3>' +
     '<a class="ip" href="search?q=ip:%IP%">%IP%</a>' +
-    '<a class="original hint--bottom" target="_blank" href="" data-hint="在新窗口打开" style="display: inline;">' +
+    '<a class="original hint--bottom" target="_blank" href="%URL%" data-hint="在新窗口打开" style="display: inline;">' +
     '<sup><i class="iconfont icon-new-window"></i></sup></a></h3>' +
     '<hr>';
-    ipItem = ipItem.replace(/%IP%/g, detail.ip);
+    var url = detail.service + '://' + detail.ip.trim() + ':' + detail.port;
+    ipItem = ipItem.replace(/%IP%/g, detail.ip).replace(/%URL%/g, url);
     
     var tagsItem = '';
     for(var i in detail.tags) {
