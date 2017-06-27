@@ -63,7 +63,16 @@
 
 
 
-<div class="col-sm-12"  style="padding:0">
+<section class="row-section bg-light">
+<div class="container">
+<div class="col-sm-12">
+      <h2 class="row-section-title">
+		 我们正在探索 ...
+      </h2>
+      <div class="row-section-title-des">
+		 分布在全球各地的爬虫节点，7 x 24 小时实时抓取、解析、更新
+      </div>
+      
       <div class="row-section-body">
         <div class="index-statistic" data-sr-id="1" style="; visibility: visible;  -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; ">
           
@@ -82,7 +91,8 @@
       </div>
       
 </div> 
-
+</div>
+</section>
 
 <script type="text/javascript">
 function callAjax(settings, callback) {
