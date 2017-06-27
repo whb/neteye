@@ -117,7 +117,12 @@ function requestAndRenderNums() {
 	});
 } 
 
-requestAndRenderNums();  
+
+$(document).ready(function() {
+	requestAndRenderNums(); 
+	setInterval(requestAndRenderNums, 30000);
+});
+ 
 </script>
 </body>
 </html>
