@@ -28,7 +28,7 @@
     <div class="row"> <!-- search line: logo + search_control + login -->
       <div class="col-xs-11 col-lg-11">
         <a href="" class="hidden-xs pull-left">
-          <img class="logo-sm" src="static/images/neteye_small.png" data-retina="static/images/neteye.png" data-fallback="static/images/NetEye.png">
+          <img class="logo-sm" src="static/images/neteye_small.png"  alt="NetEye" style="width: 160px;height: 34px;">
         </a>
 
         <div class="bar">

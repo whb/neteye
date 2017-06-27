@@ -11,7 +11,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/"><img src="static/images/neteye_small.png" alt="NetEye" style="width: 114px;height: 24px;"></a>
+        <a class="navbar-brand" href="/"><img src="static/images/neteye_small.png" alt="NetEye" style="width: 160px;height: 34px;"></a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
