@@ -19,6 +19,7 @@
   
   <script type="text/javascript" src="static/scripts/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="static/scripts/country_name2code.js"></script>
+  <script type="text/javascript" src="static/scripts/search.dist.v2_9_3.js"></script>
 </head>
 
 <body class="results" data-manual-ajax-url="help/manual_ajax">
@@ -115,6 +116,7 @@
 </div>
 </section>
 
+<jsp:include page="common/site-footer.jsp" />
 
 <script type="text/javascript">
 function callAjax(settings, callback) {

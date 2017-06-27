@@ -87,13 +87,14 @@
               <dt>网站数</dt>
             </dl>
           </div>
-          
         </div>
       </div>
       
 </div> 
 </div>
 </section>
+
+<jsp:include page="common/site-footer.jsp" />
 
 <script type="text/javascript">
 function callAjax(settings, callback) {
